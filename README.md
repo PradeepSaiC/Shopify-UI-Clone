@@ -23,6 +23,6 @@
 ![output img](./screenshot/image.png)  
 
 ### Time Taken - 2 Days
-### Live link - 
+### Live link - [Live Link](https://shopify-ui-clone-azure.vercel.app/)
 
 
