@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Clone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens:{
+                sm:'640px',
+                md:'768px',
+                lg:'1024px',
+            },
+            extend: {
+              colors: {
+                myBlack:'#000',
+                myWhite:'#fff',
+              }
+            }
+          }
+        }
+      </script>
+      <script src="https://kit.fontawesome.com/7666683bf3.js" crossorigin="anonymous"></script>
+</head>
+<body style="font-family:Poppins,sans-serif" class='bg-myWhite '>
+    <!-- navbar -->
+   <nav class="bg-myBlack w-full top-0 left-0 right-0 fixed z-10">
+    <div class="h-[8vh] mx-5 flex justify-between items-center sm:h-[10vh] md:mx-10 lg:mx-20"> <!--outer-->
+        <div class="flex gap-6 items-center md:gap-8"> <!--left-->
+            <img class="w-28" src="./assets/logo.svg" alt="Logo Img">
+            <div class="hidden text-myWhite font-medium sm:flex sm:items-center sm:gap-3 md:gap-6 lg:gap-8 ">
+                <a class="hover:underline hover:underline-offset-4" href="#">Solutions</a>
+                <a class="hover:underline hover:underline-offset-4" href="#">Pricing</a>
+                <a class="hover:underline hover:underline-offset-4" href="#">Resources</a>
+                <a class="hover:underline hover:underline-offset-4 " href="#">What's new</a>
+            </div>
+        </div>
+        <div class="flex gap-6 items-center"> <!--right-->
+        <a class="hidden md:block text-myWhite whitespace-nowrap" href="#">Log in</a>
+        <a class="font-medium text-myWhite underline underline-offset-1 whitespace-nowrap md:py-2 md:bg-myWhite md:text-myBlack md:px-5 md:rounded-3xl md:no-underline md:text-md md:hover:bg-[#ccc]" href="#">Start free trail</a>
+        <i class="text-myWhite cursor-pointer text-2xl fa-solid fa-bars md:hidden"></i>
+        </div>
+    </div>
+   </nav> 
+   
+   <!-- hero section  -->
+   <section class=" z-0">
+    <div  class="relative h-[100vh] ">
+        <video  autoplay muted loop class="absolute inset-0 object-cover h-full w-full">
+            <source src="./assets/bg-video.mp4" type"video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-myBlack opacity-60"></div>
+        <div class="relative z-5 top-20 mx-5 text-myWhite flex flex-col h-[90vh] justify-center gap-10 md:flex-row md:items-center md:justify-between md:mx-10 lg:mx-20 ">
+            <div class="flex flex-col gap-10">  <!--left-->
+                <h1 class="font-bold text-5xl lg:text-6xl md:font-semibold">
+                    Making<br/>
+                    Commerce Better <br/>
+                    for Everyone
+                </h1>
+                <p class="text-xl md:text-2xl ">
+                    Shopify is supporting the next generation of <br/>entrepreneurs, the world’s biggest brands, and <br/>everyone in between
+                </p>
+                <div class="flex flex-col gap-4 text-center md:flex-row md:mt-32 md:text-left ">
+                <a class="text-myBlack bg-myWhite text-xl font-semibold py-2 rounded-3xl border-2 border-myWhite hover:bg-transparent hover:text-myWhite md:px-4"  href="#">Start free trail</a>
+                <p>
+                    Get 3 days free then 1 month <br/>for ₹20.
+                </p>
+                </div>
+            </div>
+            <div class="text-center mt-10 flex" > <!--right-->
+                <a class="bg-[rgba(225,225,225,.2)] w-full py-2 text-xl font-semibold rounded-3xl border border-myWhite hover:bg-myWhite hover:text-myBlack md:px-4 md:mt-[140%] whitespace-nowrap"  href="#"><i class="mr-4 fa-solid fa-play"></i> Watch the Shopify story</a>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <section class="mt-40">
+    <div class="flex flex-col mx-5 md:mx-10 lg:flex-row lg:items-center lg:gap-10">
+        <div class="w-[500px] md:w-[600px] mx-auto mb-5 md:mb-10 lg:mb-0 lg:w-[800px] lg:ml-[-130px]">
+        <img class="w-full" src="./assets/world-img.png" alt="World img">
+        </div>
+        <div class="flex flex-col gap-2 md:gap-5 lg:gap-20">
+            <h1 class="text-3xl font-semibold md:text-4xl lg:text-5xl lg:leading-[60px]">
+                Discover why millions of <br/>entrepreneurs chose Shopify to <br/>build their business — <br/>from hello world to IPO.
+            </h1>
+            <div class="flex flex-row flex-wrap mt-5">
+                <div class="h-14 md:h-16 flex flex-row gap-4 w-1/2 "> <!--one-->
+                    <div style="background:linear-gradient(to bottom right, #96E4E9 64%, #82F953 36%);" class="h-full w-[4px]">
+
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-xl font-medium md:text-2xl lg:text-3xl">Millions</h1>
+                        <p class="text-lg ">of merchants worldwide</p>
+                    </div>
+                </div>
+                <div class="h-14 md:h-16 flex flex-row gap-4 w-1/2"> <!--two-->
+                    <div style="background:linear-gradient(to bottom right, #96E4E9 64%, #82F953 36%);" class="h-full w-[4px]">
+
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-xl font-medium md:text-2xl lg:text-3xl">170+</h1>
+                        <p class="text-lg">countries represented</p>
+                    </div>
+                </div>
+                <div class="h-14 md:h-16 flex flex-row gap-4 w-1/2 mt-10"> <!--third-->
+                    <div style="background:linear-gradient(to bottom right, #96E4E9 64%, #82F953 36%);" class="h-full w-[4px]">
+
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-xl font-medium md:text-2xl lg:text-3xl">10%</h1>
+                        <p class="text-lg">of total US ecommerce</p>
+                    </div>
+                </div>
+                <div class="h-14 md:h-16 flex flex-row gap-4 w-1/2 mt-10"> <!--four-->
+                    <div style="background:linear-gradient(to bottom right, #96E4E9 64%, #82F953 36%);" class="h-full w-[4px]">
+
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-xl font-medium md:text-2xl lg:text-3xl">$44TCr</h1>
+                        <p class="text-lg">global economic activity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+   <!-- community section  -->
+   <section class="mx-5 md:mx-10 lg:mx-20 mt-10">
+    <h2 class="uppercase font-medium text-slate-700">
+        Explore the world's largest commerce community 
+    </h2>
+    <div class="mt-10 flex flex-row flex-wrap justify-center gap-3 lg:justify-between">  <!--outer-->
+        <div class="p-6 pb-8 border border-[rgba(0,0,0,.1)] rounded flex flex-col  items-between gap-10 w-2/3 sm:w-2/5 md:w-[290px] shadow-[0px_0px_10px_1px_rgba(0,0,0,.2)] cursor-pointer"> <!--one-->
+            <div class="mb-1 ml-[-8px] md:w-16">
+                <img class="md:w-full" src="./assets/plus.svg" alt="infinity icon">
+            </div>
+            <div>
+                <h3 class="text-lg font-medium">Plus</h3>
+                <p class="text-gray-500 mt-2">
+                    A commerce solution for <br/>
+                    growing digital brands
+                </p>
+            </div>
+        </div>
+        <div class="p-6 pb-8 border border-[rgba(0,0,0,.1)] rounded flex flex-col items-between gap-10  w-2/3 sm:w-2/5 md:w-[290px] shadow-[0px_0px_10px_1px_rgba(0,0,0,.2)] cursor-pointer"> <!--two-->
+            <div class="mb-1 ml-[-8px] md:w-16">
+                <img class="md:w-full" src="./assets/partner.svg" alt="partner icon">
+            </div>
+            <div>
+                <h3 class="text-lg font-medium">Partners</h3>
+                <p class="text-gray-500 mt-2">
+                    Offer your expertise to Shopify<br/>
+                    merchants all over the world
+                </p>
+            </div>
+        </div>
+        <div class="p-6  pb-8 border border-[rgba(0,0,0,.1)] rounded flex flex-col items-between gap-10 w-2/3 sm:w-2/5 md:w-[290px] shadow-[0px_0px_10px_1px_rgba(0,0,0,.2)] cursor-pointer"> <!--three-->
+            <div class="mb-1 ml-[-8px] md:w-16">
+                <img class="md:w-full" src="./assets/developers.svg" alt="developers icon">
+            </div>
+            <div>
+                <h3 class="text-lg font-medium">Developers</h3>
+                <p class="text-gray-500 mt-2">
+                   Build the future of commerce <br/>
+                   with Shopify's powerful API
+                </p>
+            </div>
+        </div>
+        <div class="p-6 pb-8 border border-[rgba(0,0,0,.1)] rounded flex flex-col items-between gap-10 w-2/3 sm:w-2/5 md:w-[290px] shadow-[0px_0px_10px_1px_rgba(0,0,0,.2)] cursor-pointer"> <!--four-->
+            <div class="mb-1 ml-[-8px] md:w-16">
+                <img class="md:w-full" src="./assets/video.svg" alt="video icon">
+            </div>
+            <div>
+                <h3 class="text-lg font-medium">Creators</h3>
+                <p class="text-gray-500 mt-2">
+                   Turn followers into customers<br/>
+                   with commerce tools for<br/>
+                   creators
+                </p>
+            </div>
+        </div>
+    </div>
+   </section>
+   <!-- building store section  -->
+   <section class="mt-20 md:mt-30 lg:mt-40 mx-5 md:mx-10 lg:mx-20">
+    <h2 class="uppercase font-medium text-slate-700 md:text-lg lg:text-xl">
+        Build an online store 
+    </h2>
+    <h1 class="font-semibold text-3xl md:text=4xl lg:text-5xl mt-1 lg:mt-3">
+        Your store,your way
+    </h1>
+    <div class="mt-5 md:mt-10 lg:mt-20">
+    <div class=" w-[96%] h-[450px] lg:h-[560px] mx-auto">
+    <img class="w-full h-full" src="./assets/social-media.jpg" alt="social media icons">
+    </div>
+    <div class="w-[96%] mx-auto mt-8 flex flex-row flex-wrap gap-4 justify-center text-center md:text-left md:justify-between ">  <!--outer-->
+        <div class="flex flex-col gap-4"> <!--one-->
+            <div class="h-[1px] w-full mt-3 mb-8 bg-[rgba(0,0,0,.2)]">
+
+            </div>
+            <h3 class="font-semibold text-lg">
+                Build an online storefront
+            </h3>
+            <p>
+                Bring your vision to life with our drag-and-drop <br/>store creator. No coding expertise required — <br/>just your next big idea.
+            </p>
+            <a class="font-medium underline underline-offset-1" href="#">Online Store Builder</a>
+        </div>
+        <div class="flex flex-col gap-4"> <!--two-->
+            <div class="h-[1px] w-full mt-3 mb-8 bg-[rgba(0,0,0,.2)]">
+
+            </div>
+            <h3 class="font-semibold text-lg">
+                Craft the brand you want
+            </h3>
+            <p>
+                Select from customizable tamplates created by <br/>
+                a community of world-class designers.
+            </p>
+            <a class="font-medium underline underline-offset-1" href="#">Theme Store</a>
+        </div>
+        <div class="flex flex-col gap-4"> <!--three-->
+            <div class="h-[1px] w-full mt-3 mb-8 bg-[rgba(0,0,0,.2)]">
+
+            </div>
+            <h3 class="font-semibold text-lg">
+                Level up with apps
+            </h3>
+            <p>
+                Add more features and functionality to your <br/>online store with apps built by trusted Shopify<br/>developers. 
+            </p>
+            <a class="font-medium underline underline-offset-1" href="#">Shopify App Store</a>
+        </div>
+    </div>
+    </div>
+   </section>
+   <!-- sales section  -->
+   <section class="mt-20 md:mt-30 lg:mt-40 mx-5 md:mx-10 lg:mx-20">
+    <div class="flex flex-col text-center gap-4 items-center md:flex-row md:justify-between md:text-left"> <!--outer-->
+        <div class="flex flex-col gap-2"> <!--left-->
+            <h3 class="uppercase font-medium text-slate-700 md:text-lg lg:text-xl">Sales Channels</h3>
+            <h1 class="font-semibold text-3xl md:text=4xl lg:text-5xl mt-1 lg:leading-[55px]">
+                Sell to every buyer,<br/>
+                everywhere
+            </h1>
+        </div>
+        <div class="flex flex-col gap-8"> <!--right-->
+            <p>
+                Sell online, in person, and around the world with the <br/>marketing tools, social integrations, and sales channels <br/>you need to get your products in front of customers.
+            </p>
+            
+            <div class="flex flex-row justify-between relative cursor-pointer">
+                <h4 class="font-normal text-lg">
+                    Start selling
+                </h4>
+                <i class="text-2xl fa-solid fa-arrow-right"></i>
+                <div class=" absolute w-full h-[1px] bg-myBlack bottom-[-10px]">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- images  -->
+    <div class="mt-16 md:mt-10 lg:mt-20 flex flex-col items-center gap-5 md:flex-row md:justify-between"> <!--outer-->
+        <div class="w-[70%]">
+            <img class="w-full " src="./assets/seller-img1.jpg" alt="Seller img 1">
+        </div>
+        <div class="w-[70%]">
+            <img class="w-full " src="./assets/seller-img2.jpg" alt="Seller img 2">
+        </div>
+        <div class="w-[70%]">
+            <img class="w-full" src="./assets/seller-img3.jpg" alt="Seller img 3">
+        </div>
+    </div>
+    <!-- point of sale  -->
+    <div class="mt-16 md:mt-10 lg:mt-28 flex flex-col items-center gap-20 text-center md:text-left md:flex-row md:justify-between"> <!--outer div-->
+        <div class="flex flex-col gap-5 justify-between items-center md:items-start "> <!--left-->
+            <h3 class="uppercase font-medium text-slate-700 md:text-lg lg:text-xl">Point of Sale</h3>
+            <h1 class="font-semibold text-3xl md:text=4xl lg:text-[42px] mt-1 lg:leading-[50px]">
+                Flexible point of sale to <br/>power your retail store
+            </h1>
+            <p class=" lg:text-xl lg:mt-4">
+                A POS system that allows customers to shop their <br/>way, from online to checkout line.
+            </p>
+            <div class="flex flex-row justify-between lg:mt-5 relative cursor-pointer w-[56%]">
+                <h4 class="font-normal text-lg">
+                    Meet Shopify POS
+                </h4>
+                <i class="text-2xl fa-solid fa-arrow-right"></i>
+                <div class=" absolute w-full h-[1px] bg-myBlack bottom-[-8px]">
+
+                </div>
+            </div>
+        </div>
+        <div class="w-[450px]  md:w-1/2"> <!--right-->
+            <img class="w-full" src="./assets/point-of-sale-img.png" alt="points of sale img">
+        </div>
+    </div>
+   </section>
+   <!-- built in marketing tools section -->
+   <section class="mt-10 md:mt-20 lg:mt-32 mx-5 md:mx-10 lg:mx-20">
+    <div class="flex flex-col text-center gap-4 items-center md:flex-row md:justify-between md:text-left"> <!--outer-->
+        <div class="flex flex-col gap-2"> <!--left-->
+            <h3 class="uppercase font-medium text-slate-700 md:text-lg lg:text-xl">Built in marketing tools</h3>
+            <h1 class="font-semibold text-3xl md:text=4xl lg:text-[42px] mt-1 lg:leading-[50px]">
+                From first touch to full funnel
+            </h1>
+        </div>
+        <div class="w-[350px] md:w-[500px]"> <!--right-->
+            <div class="flex flex-row justify-between items-center relative cursor-pointer">
+                <h4 class="font-normal text-lg">
+                    Leverage our full marketing tools
+                </h4>
+                <i class="text-2xl fa-solid fa-arrow-right"></i>
+                <div class=" absolute w-full h-[1px] bg-myBlack bottom-[-10px]">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col mt-16 md:mt-10 lg:mt-20 text-center gap-4 items-center md:flex-row md:justify-between md:text-left"> <!--outer-->
+        <div class="flex flex-col gap-3 md:gap-10"> <!--left-->
+            <div class="flex flex-row gap-5">
+                <div class="hidden md:block" >
+                <div class="rounded-full p-1 bg-[rgba(100,33,242,.090)]">
+                    <div class="flex justify-center items-center p-2 rounded-full bg-[rgba(100,33,242,.102)]">
+                        <i class=" text-[#6421F2] fa-solid fa-hashtag"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 justify-center flex-grow relative ">
+                    <h3 class="text-2xl font-semibold">Reach new leads</h3>
+                    <p class="mb-8">
+                        Find new shoppers with SEO,social media,and content<br/>
+                        marketing  tools that help you reach customers where they are.
+                    </p>
+                    <div class="h-[2px] absolute bg-[rgba(0,0,0,.2)] w-full bottom-0">
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5">
+                <div class="hidden md:block" >
+                <div class="rounded-full p-1 bg-[rgba(33,104,242,.090)]">
+                    <div class="flex justify-center items-center p-2 rounded-full bg-[rgba(33,104,242,.102)]">
+                        <i class=" text-[#2168F2]  fa-solid fa-at"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 justify-center flex-grow relative ">
+                    <h3 class="text-2xl font-semibold">Engage with customers</h3>
+                    <p class="mb-8">
+                      Build custom email campaigns, set automation to serve every<br/>
+                      segment,and connect with the customers on the go with <br/>
+                      integrated messaging tools.
+                    </p>
+                    <div class="h-[2px] absolute bg-[rgba(0,0,0,.2)] w-full bottom-0">
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5">
+                <div class="hidden md:block" >
+                <div class="rounded-full p-1 bg-[rgba(215,62,62,.090)]">
+                    <div class="flex justify-center items-center p-2 rounded-full bg-[rgba(215,62,62,.102)]">
+                        <i class="text-[#D73E3E]  fa-solid fa-chart-simple"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 justify-center flex-grow relative ">
+                    <h3 class="text-2xl font-semibold">Data you can build on</h3>
+                    <p class="mb-8">
+                    Take control of your customer data to build custom audiences <br/>
+                    and explore the customer insights that drive ongoing growth.
+                    </p>
+                    <div class="h-[2px] absolute bg-[rgba(0,0,0,.2)] w-full bottom-0">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[80%] md:w-1/2"> <!--right-->
+            <img class="w-full  object-cover" src="./assets/tools-img1.jpg" alt="tools img 1">
+        </div>
+    </div>
+   </section>
+   <!-- business operations section  -->
+   <section class="mt-10 md:mt-20 lg:mt-52 mx-5 md:mx-10 lg:mx-20">
+    <div class="flex flex-col text-center gap-4 items-center md:flex-row md:justify-between md:text-left"> <!--outer-->
+        <div class="flex flex-col gap-2"> <!--left-->
+            <h3 class="uppercase font-medium text-slate-700 md:text-lg lg:text-xl">CENTRALIZED BUSINESS OPERATIONS</h3>
+            <h1 class="font-semibold text-3xl md:text=4xl lg:text-[42px] mt-1 lg:leading-[50px]">
+                Streamline your back office
+            </h1>
+        </div>
+        <div class="w-[350px] md:w-[500px]"> <!--right-->
+            <div class="flex flex-row justify-between items-center relative cursor-pointer">
+                <h4 class="font-normal text-lg">
+                    Manage your business
+                </h4>
+                <i class="text-2xl fa-solid fa-arrow-right"></i>
+                <div class=" absolute w-full h-[1px] bg-myBlack bottom-[-10px]">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col-reverse mt-16 md:mt-10 lg:mt-20 text-center gap-4 items-center md:flex-row-reverse md:justify-between md:text-left"> <!--outer-->
+        <div class="flex flex-col gap-3 md:gap-28"> <!--right-->
+            <div class="flex flex-row gap-5">
+                <div class="hidden md:block" >
+                <div class="rounded-full p-1 bg-[rgba(100,33,242,.090)]">
+                    <div class="flex justify-center items-center p-2 rounded-full bg-[rgba(100,33,242,.102)]">
+                        <i class="text-[#6421F2] fa-solid fa-chart-simple"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 justify-center flex-grow relative ">
+                    <h3 class="text-2xl font-semibold">Oversee your operations</h3>
+                    <p class="mb-8">
+                      Manage inventory,track payments,and view real-time business<br/>
+                      insights - all in one place ,do you can focus on building your <br/>
+                      business.
+                    </p>
+                    <div class="h-[2px] absolute bg-[rgba(0,0,0,.2)] w-full bottom-0">
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 ">
+                <div class="hidden md:block" >
+                <div class="rounded-full p-1 bg-[rgba(33,104,242,.090)]">
+                    <div class="flex justify-center items-center p-2 rounded-full bg-[rgba(33,104,242,.102)]">
+                        <i class="text-[#2168F2] fa-solid fa-cube"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 justify-center flex-grow relative ">
+                    <h3 class="text-2xl font-semibold">Fulfill every order</h3>
+                    <p class="mb-8">
+                      Get your products where they need to be with integrated<br/>
+                      inventory management and streamlined returns.
+                    </p>
+                    <div class="h-[2px] absolute bg-[rgba(0,0,0,.2)] w-full bottom-0">
+
+                    </div>
+                </div>
+            </div>
+         </div> 
+         <div class="w-[80%] md:w-1/2"> <!--left-->
+            <img class="w-full  object-cover" src="./assets/tools-img2.png" alt="tools img 2">
+        </div>  
+    </div>
+    </section>
+    <!-- free trail section  -->
+    <section style="background:linear-gradient(86deg,#89ffbf 10.26%,#a4fa84 53.53%,#b3a7ff);" class="mt-10 md:mt-16 lg:mt-20 h-16 w-full flex flex-row justify-around items-center">
+            <h3 class="text-2xl font-semibold cursor-pointer" >
+                Start your free trail
+                <i class=" ml-5 fa-solid fa-arrow-right"></i>
+            </h3>
+            <h3 class="hidden md:block text-2xl font-semibold cursor-pointer" >
+                Start your free trail
+                <i class=" ml-5 fa-solid fa-arrow-right"></i>
+            </h3>
+            <h3 class="hidden md:block text-2xl font-semibold cursor-pointer" >
+                Start your free trail
+                <i class=" ml-5 fa-solid fa-arrow-right"></i>
+            </h3>
+    </section>
+
+    <!-- ordering section  -->
+   <section class="mt-8 md:mt-20 lg:mt-32 mx-5 md:mx-10 lg:mx-20">
+    <video class=" w-[96%] mx-auto lg:h-[600px]" autoplay muted loop>
+        <source src="./assets/order-video.mp4" type="video/mp4">
+    </video>
+    </section>
+
+    <!-- faculty section  -->
+   <section class="mt-8 md:mt-20 lg:mt-52 mx-5 md:mx-10 lg:mx-20">
+    <div class="text-center flex flex-col-reverse items-center gap-5 md:text-left md:flex-row md:justify-between "> <!--outer-->
+        <div class="flex flex-col gap-5 items-around md:gap-8"> <!--left-->
+            <h3 class="font-semibold text-xl md:text-3xl lg:text-5xl lg:leading-[57px]" >
+                <sup><i class="text-sm md:text-3xl fa-solid fa-quote-left"></i></sup>
+                We went from burning beans <br/>in our garage to needing a <br/>10,000 sq. ft facility to meet <br/>customer demand.
+                <sup><i class="text-sm md:text-3xl fa-solid fa-quote-right"></i></sup>
+            </h3>
+            <p class="md:text-3xl font-semibold lg:mt-10">
+                BLK & Bold
+            </p>
+            <p>
+                <span class="font-medium">Rod Johnson</span> - Owner
+            </p>
+            <div class="flex flex-row gap-5 justify-center md:justify-start">
+                <div class="flex flex-row justify-center items-center cursor-pointer rounded-full border-2 border-myBlack">
+                    <i class="p-4 fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="flex flex-row justify-center items-center cursor-pointer rounded-full border-2 border-myBlack">
+                    <i class="p-4 fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w-[60%] md:w-[30%]"> <!--right-->
+            <img class="w-full" src="./assets/faculty.png" alt="faculty ">
+        </div>
+    </div>
+    </section>
+
+    <!-- support section  -->
+    <section class="mt-8 md:mt-20 lg:mt-32 bg-myBlack text-myWhite">
+        <div class="mx-8 md:mx-16 lg:mx-24 py-8 md:py-16 lg:py-24">
+            <!-- heading -->
+            <div class="text-center">
+                <h4 class="uppercase font-semibold text-xl mb-3 md:text-xl md:mb-5">Shopify Support</h4>
+                <h1 class="font-semibold text-4xl md:text-3xl lg:text-5xl lg:leading-[55px]">
+                    The help you need,<br/>
+when you need it
+                </h1>
+            </div>
+            <!-- cards -->
+            <div class="mt-8 md:mt-16 lg:mt-24 flex flex-col items-center flex-wrap gap-6 md:flex-row md:justify-center "> <!--outer-->
+                <div style="background: linear-gradient(180deg, #0A0A0A 0%, rgba(5, 5, 5, 0.58) 100%),linear-gradient(0deg, #1B1C1C, #1B1C1C);" class="p-10 rounded-2xl border border-[rgba(225,225,225,.2)] flex flex-col gap-6 w-[80%] md:w-[45%] h-[370px]"> <!--one-->
+                    <div style="background: linear-gradient(46.87deg, #96E4E9 0%, #82F953 96.94%);" class="p-4 w-[70px] h-[70px] flex justify-center items-center rounded-xl">
+                    <i class="text-myBlack text-3xl fa-solid fa-blog"></i>
+                    </div>
+                    <h1 class="text-3xl font-semibold">Blog</h1>
+                    <p>
+                        Get all the marketing and business strategy tips you <br/>need to help you run an online business.
+                    </p>
+                    <a class="text-sm ml-[-5px]  bg-gray-900 hover:bg-transparent px-3 py-1 border rounded-2xl border-[rgba(225,225,225,.5)] mr-auto" href="#">
+                        Read <span class="ml-2">></span>
+                    </a>
+                </div>
+                <div style="background: linear-gradient(180deg, #0A0A0A 0%, rgba(5, 5, 5, 0.58) 100%),linear-gradient(0deg, #1B1C1C, #1B1C1C);" class="p-10 rounded-2xl border border-[rgba(225,225,225,.2)] flex flex-col gap-6 w-[80%] md:w-[45%] h-[370px]">  <!--two-->
+                    <div style="background: linear-gradient(45deg, #63FFA9 0%, #623AFF 120.54%);" class="p-4 w-[70px] h-[70px] flex justify-center items-center rounded-xl">
+                    <i class="text-myBlack text-3xl fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h1 class="text-3xl font-semibold">Online Courses</h1>
+                    <p>
+                        Learn tried-and-tested business tips with instant <br/>
+                        access to lessons from successful entrepreneurs.
+                    </p>
+                    <a class="text-sm ml-[-5px]  bg-gray-900 hover:bg-transparent px-3 py-1 border rounded-2xl border-[rgba(225,225,225,.5)] mr-auto" href="#">
+                        Learn <span class="ml-2">></span>
+                    </a>
+                </div>
+                <div style="background: linear-gradient(180deg, #0A0A0A 0%, rgba(5, 5, 5, 0.58) 100%),linear-gradient(0deg, #1B1C1C, #1B1C1C);" class="p-10 rounded-2xl border border-[rgba(225,225,225,.2)] flex flex-col gap-6 w-[80%] md:w-[45%] h-[370px]">  <!--three--> 
+                    <div style="background: linear-gradient(46.87deg, #5576ED 0%, #6FFD96 96.94%);" class="p-4 w-[70px] h-[70px] flex justify-center items-center rounded-xl">
+                    <i class="text-myBlack text-3xl fa-solid fa-people-group"></i>
+                    </div>
+                    <h1 class="text-3xl font-semibold">Community</h1>
+                    <p>
+                        Connect with a community of brands,partners and<br/>
+                        fellow merchants who understand Shopify.
+                    </p>
+                    <a class="text-sm ml-[-5px]  bg-gray-900 hover:bg-transparent px-3 py-1 border rounded-2xl border-[rgba(225,225,225,.5)] mr-auto" href="#">
+                        Discuss <span class="ml-2">></span>
+                    </a>
+                </div>
+                <div style="background: linear-gradient(180deg, #0A0A0A 0%, rgba(5, 5, 5, 0.58) 100%),linear-gradient(0deg, #1B1C1C, #1B1C1C);" class="p-10 rounded-2xl border border-[rgba(225,225,225,.2)] flex flex-col gap-6 w-[80%] md:w-[45%] h-[370px]">  <!--four-->
+                    <div style="background: linear-gradient(150.75deg, #66D08A 17.95%, #436AF4 93.13%);" class="p-4 w-[70px] h-[70px] flex justify-center items-center rounded-xl">
+                    <i class="text-myBlack text-3xl fa-solid fa-circle-info"></i>
+                    </div>
+                    <h1 class="text-3xl font-semibold">Help Center</h1>
+                    <p>
+                        Find answers with a dedicated helpdexk resource full <br/>of articles and videos from our Support team.
+                    </p>
+                    <a class="text-sm ml-[-5px]  bg-gray-900 hover:bg-transparent px-3 py-1 border rounded-2xl border-[rgba(225,225,225,.5)] mr-auto" href="#">
+                        Get Help <span class="ml-2">></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- grow business section  -->
+    <section style="background:linear-gradient(to right bottom,#42bfb7 0%,#66D08A);"  class=" text-myBlack text-center py-20">
+        <div class="flex flex-col items-center gap-6 justify-center">
+            <h1 class="text-4xl font-semibold md:text-3xl lg:text-5xl lg:leading-[60px]">
+                Grow your <br/>
+                business here 
+            </h1>
+            <p class="text-lg md:text-2xl lg:text-3xl">
+                Whether you want to sell products down the street or around the world, we have all <br/>the tools you need.
+            </p>
+            <a class="p-2 px-8 rounded-3xl text-myWhite bg-myBlack text-xl font-semibold hover:bg-[rgba(0,0,0,.7)]" href="#">
+                Start free trail
+            </a>
+        </div>
+    </section>
+    <!-- footer section  -->
+   <section class="mt-8 md:mt-20 lg:mt-24 mx-5 md:mx-10 lg:mx-20">
+    <div class="flex flex-row flex-wrap justify-center md:justify-start relative"> <!--outer-->
+        <div class="w-full md:w-[30%] h-[200px] md:h-full flex justify-center md:justify-start " >
+            <i class="text-5xl fa-brands fa-shopify "></i>
+        </div>
+        <div class="flex flex-row flex-wrap justify-start gap-24 md:w-[70%]">
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Shopify</h2>
+                <a href="#" class="text-lg hover:underline">
+                    About
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Investors
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Partners
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Affiliates
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Legal
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Service status
+                </a>
+            </div>
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Support</h2>
+                <a href="#" class="text-lg hover:underline">
+                    Merchant support
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Help center
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Hire a Partner
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Shopify Community
+                </a>
+            </div>
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Developers</h2>
+                <a href="#" class="text-lg hover:underline">
+                    Shopify dev
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    API documentation
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Dev Degree
+                </a>
+            </div>
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Products</h2>
+                <a href="#" class="text-lg hover:underline">
+                    Shopify Plus
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Linkpop
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Shopify for enterprise
+                </a>
+            </div>
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Global impact</h2>
+                <a href="#" class="text-lg hover:underline">
+                    Sustainability
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Social Impact
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Build Black
+                </a>
+            </div>
+            <div class="flex flex-col gap-3"> 
+                <h2 class="font-semibold text-2xl mb-5">Solutions</h2>
+                <a href="#" class="text-lg hover:underline">
+                    Online store builder
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Website builder
+                </a>
+                <a href="#" class="text-lg hover:underline">
+                    Ecommerce website
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-[1px] bg-[rgba(0,0,0,.3)] absolute bottom-[-50px]">
+
+        </div>
+    </div>
+    </section>
+    <!-- footer nav section  -->
+   <section class="mt-16 md:mt-20 lg:mt-24 mx-5 md:mx-10 lg:mx-20 my-5 md:my-10 lg:my-20 ">
+    <div class="flex flex-row justify-center md:justify-between flex-wrap">
+        <div class="flex gap-3 "> <!--left-->
+            <i class="text-2xl fa-solid fa-globe"></i>
+            <h2 class="text-xl">India</h2>
+            <div class="flex md:ml-5 gap-8 flex-wrap ">
+                <a href="#" class="text-2xl hover:underline ">Terms of Service</a>
+                <a href="#" class="text-2xl hover:underline ">Privacy Policy</a>
+                <a href="#" class="text-2xl hover:underline ">Sitemap</a>
+                <a href="#" class="text-2xl hover:underline ">Privacy Choices</a>
+            </div>
+        </div>
+        <div class="flex  items-center gap-6 flex-wrap mt-10 md:mt-6 md:mx-auto lg:mt-0 lg:mx-0"> <!--right-->
+            <i class="text-4xl cursor-pointer fa-brands fa-facebook"></i>
+            <i class="text-4xl cursor-pointer fa-brands fa-x-twitter"></i>
+            <i class="text-4xl cursor-pointer fa-brands fa-youtube"></i>
+            <i class="text-4xl cursor-pointer fa-brands fa-instagram"></i>
+            <i class="text-4xl cursor-pointer fa-brands fa-linkedin"></i>
+            <i class="text-4xl cursor-pointer fa-brands fa-pinterest"></i>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
+
